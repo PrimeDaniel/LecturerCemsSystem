@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="626.0" styleClass="background" stylesheets="@/Styles/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.StudentManualTestController">
+
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Label layoutX="410.0" layoutY="29.0" prefHeight="17.0" prefWidth="114.0" text="Reameaning time:" />
+      <Label fx:id="timeLabel" layoutX="542.0" layoutY="29.0" prefHeight="17.0" prefWidth="70.0" text="00:00:00" />
+      <Button fx:id="subBtn" layoutX="410.0" layoutY="311.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
+      <Button fx:id="upload" layoutX="340.0" layoutY="194.0" mnemonicParsing="false" onAction="#click_upload" text="Upload Test" />
+      <Label fx:id="selectedFileLabel" layoutX="22.0" layoutY="128.0" prefHeight="17.0" prefWidth="518.0" text="Text" textFill="#237958">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Button fx:id="download" layoutX="355.0" layoutY="84.0" mnemonicParsing="false" onAction="#click_download" text="Download" />
+      <Label fx:id="downloadMes" layoutX="22.0" layoutY="161.0" prefHeight="17.0" prefWidth="508.0" text="Text" textFill="#237958">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Label fx:id="crsName" layoutX="206.0" layoutY="25.0" prefHeight="17.0" prefWidth="174.0" text="Course Name Exam" textFill="#072dc4">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Text layoutX="22.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To start Test please click on download :" wrappingWidth="290.13670349121094">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="22.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To upload Answers folder click on upload:" wrappingWidth="300.5366668701172">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text layoutX="22.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To submit uploaded file and end test click on submit:" wrappingWidth="378.1367645263672">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="selectedUpFileLbl" fill="#237958" layoutX="22.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="566.13671875">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="uploadMes" fill="#237958" layoutX="22.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="566.13671875">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

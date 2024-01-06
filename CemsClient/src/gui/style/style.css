@@ -1,0 +1,127 @@
+.background{
+    -fx-background-image: url("cemsbg.jpeg");
+    
+    
+    -fx-background-size:stretch;
+
+}
+.button{
+    -fx-background-color: #42dcdf;
+    -fx-text-fill: #000000;
+    -fx-border-width: 3px;
+    -fx-background-radius:100;
+
+   -fx-font-family: "Courier New",san-serif;
+   -fx-font-size:15px;
+   -fx-font-weight:bold;
+   -fx-scale-x: 1;
+   -fx-scale-y: 1;
+   -fx-transition-duration: 0.3s;
+   -fx-transition-property: -fx-scale-x, -fx-scale-y;
+   -fx-transition-timing-function: ease-in-out;
+  
+}
+.button:pressed{
+-fx-background-color: #ffffff;
+-fx-rotate: 5;
+
+
+
+
+
+}
+.button:hover{
+-fx-border-color:rgb(163, 163, 255);
+
+-fx-border-radius:100px;
+-fx-scale-x: 1.1;
+-fx-scale-y: 1.1;
+
+
+
+}
+.declineButton{
+    -fx-background-color: #f22727;
+    -fx-text-fill: #000000;
+    -fx-effect: innershadow(gaussian, #840707, 30, 0, 0, 0) inset, 
+    innershadow(gaussian, #840707, 30, 0, 0, 0) inset, 
+    innershadow(gaussian, #840707, 10, 57, 0, 0) inset;
+    -fx-background-radius:100px;
+   -fx-font-family: "Courier New",san-serif;
+   -fx-font-size:20px;
+   -fx-font-weight:bold;
+
+
+
+
+}
+.declineButton:hover{
+    -fx-border-color:rgb(163, 163, 255);
+
+    -fx-border-radius:100px;
+    -fx-scale-x: 1.1;
+        -fx-scale-y: 1.1;
+    
+
+
+
+}
+.ApprovedButton{    
+    -fx-background-color: #62ef58;
+    -fx-text-fill: #000000;
+    -fx-effect: innershadow(gaussian, #097b03, 30, 0, 0, 0) inset, 
+                 innershadow(gaussian, #097b03, 30, 0, 0, 0) inset, 
+                 innershadow(gaussian, #097b03, 10, 57, 0, 0) inset;
+
+    -fx-background-radius:100px;
+   -fx-font-family: "Courier New",san-serif;
+   -fx-font-size:20px;
+   -fx-font-weight:bold;
+
+}
+.ApprovedButton:hover{
+
+
+    -fx-border-color:rgb(163, 163, 255);
+
+-fx-border-radius:100px;
+-fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+
+}
+
+.sidebarButton{
+-fx-background-radius:0 50 50 0;
+-fx-margin:1px;
+-fx-font-size:20px;
+
+
+
+}
+.sidebarButton:hover{
+
+    -fx-border-radius:0 50 50 0;
+    -fx-padding:7px;
+
+
+}
+.topbarButton{
+
+-fx-background-radius:20 20 0 0;
+-fx-font-size:15px;
+
+
+
+
+}
+.topbarButton:hover{
+-fx-border-radius:20 20 0 0;
+-fx-border-bottom: trasparent;
+
+}
+.button-bar{
+    -fx-spacing:10px;
+}
+.topbarButton:pressed{
+-fx-rotate:0px;
+}

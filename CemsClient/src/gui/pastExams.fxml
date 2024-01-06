@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="731.0" prefWidth="1067.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.pastExamsController">
+   <children>
+      <ImageView fitHeight="758.0" fitWidth="1067.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/background.jpeg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="pastExamsTable" layoutX="98.0" layoutY="211.0" prefHeight="360.0" prefWidth="879.0">
+        <columns>
+          <TableColumn fx:id="examId" prefWidth="78.0" text="exam id" />
+          <TableColumn fx:id="code" minWidth="0.0" prefWidth="92.0" text="code" />
+            <TableColumn fx:id="testTime" prefWidth="142.0" text="test time" />
+            <TableColumn fx:id="dateStart" prefWidth="159.0" text="date start" />
+            <TableColumn fx:id="dateEnd" prefWidth="188.0" text="date end" />
+            <TableColumn fx:id="cheat" prefWidth="74.0" text="cheat" />
+            <TableColumn fx:id="studentsNumber" prefWidth="145.0" text="students number" />
+        </columns>
+      </TableView>
+      <Button fx:id="backBtn" layoutX="27.0" layoutY="667.0" mnemonicParsing="false" onAction="#backToMainScreen" prefHeight="39.0" prefWidth="70.0" text="back" />
+      <Text layoutX="152.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Label layoutX="97.0" layoutY="194.0" text="view the past exams and see if someone cheated:" />
+      <Label layoutX="413.0" layoutY="113.0" prefHeight="58.0" prefWidth="225.0" text="Past Exams" textFill="#018679">
+         <font>
+            <Font name="Calibri Bold" size="41.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="3.0" prefHeight="58.0" prefWidth="123.0" text="Cems" textFill="#00ffbd">
+         <font>
+            <Font name="Calibri Bold" size="50.0" />
+         </font>
+         <effect>
+            <DropShadow height="38.59" radius="18.795" spread="0.53" width="38.59">
+               <input>
+                  <InnerShadow height="191.25" radius="111.0625" width="255.0">
+                     <color>
+                        <Color green="0.02631578966975212" blue="0.01798245683312416" />
+                     </color>
+                  </InnerShadow>
+               </input>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Text fx:id="toolWriteQuestions" fill="#03573c" layoutX="525.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Write Questions">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="toolGrade" fill="#03573c" layoutX="875.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Grade">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="toolStatistics" fill="#03573c" layoutX="970.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Statistics">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="toolCreateExams" fill="#03573c" layoutX="710.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Create Exams">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

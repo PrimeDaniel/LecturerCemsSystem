@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="182.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ApproveSubmitController">
+   <children>
+      <Label fx:id="lbl" layoutX="170.0" layoutY="14.0" prefHeight="22.0" prefWidth="282.0" text="Are you sure that you want to submit?">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="noBtn" layoutX="170.0" layoutY="109.0" mnemonicParsing="false" onAction="#noBtnclicked" prefHeight="26.0" prefWidth="92.0" text="No" />
+      <Button fx:id="yesBtn" layoutX="337.0" layoutY="110.0" mnemonicParsing="false" onAction="#yesBtnClicked" prefHeight="26.0" prefWidth="86.0" text="Yes" />
+      <Text fx:id="mesTxt" layoutX="170.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Once you Submited you can't submit again!" wrappingWidth="268.53675842285156">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Button fx:id="clsBtn" layoutX="523.0" layoutY="69.0" mnemonicParsing="false" onAction="#clsBtnClicked" prefHeight="26.0" prefWidth="71.0" text="Close" />
+   </children>
+</AnchorPane>

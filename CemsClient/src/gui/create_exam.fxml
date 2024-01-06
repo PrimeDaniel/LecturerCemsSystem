@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="createExamForm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="731.0" prefWidth="1067.0" style="-fx-background-color: #d8bfd8;" styleClass="b" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.createExamController">
+   <children>
+      <ImageView fitHeight="758.0" fitWidth="1067.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/background.jpeg" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="coursesComboBox" layoutX="29.0" layoutY="137.0" onAction="#btnSelectCourse" prefHeight="25.0" prefWidth="212.0" promptText="Select Course" />
+      <ComboBox fx:id="professionsComboBox" layoutX="29.0" layoutY="102.0" onAction="#btnSelectProfession" prefHeight="25.0" prefWidth="212.0" promptText="Select Subject" />
+      <Button fx:id="backBtn" layoutX="23.0" layoutY="682.0" mnemonicParsing="false" onAction="#backToMainScreen" prefHeight="35.0" prefWidth="74.0" text="back" />
+      <Button fx:id="reviewExamBtn" layoutX="916.0" layoutY="588.0" mnemonicParsing="false" onAction="#reviewExam" prefHeight="52.0" prefWidth="123.0" text="Review Exam">
+         <effect>
+            <DropShadow height="50.31" radius="23.9225" width="47.38">
+               <color>
+                  <Color red="0.02777777798473835" green="1.0" blue="0.8217592835426331" />
+               </color>
+            </DropShadow>
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <TableView fx:id="questionViewTABLE" layoutX="25.0" layoutY="196.0" prefHeight="388.0" prefWidth="445.0">
+         <columns>
+            <TableColumn fx:id="questionIdViewColumn" prefWidth="75.0" text="#" />
+            <TableColumn fx:id="questionTextColumn" minWidth="0.0" prefWidth="369.0" text="question" />
+         </columns>
+      </TableView>
+      <Text fill="#018679" layoutX="382.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Creation" wrappingWidth="467.0">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Text>
+      <Label layoutX="40.0" layoutY="71.0" prefHeight="35.0" prefWidth="114.0" text="please select:" textFill="#1e1f26">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Label>
+      <TextField layoutX="272.0" layoutY="19.0" text="Home &gt; Exam creation" />
+      <Button fx:id="showQuestionView" layoutX="257.0" layoutY="104.0" mnemonicParsing="false" onAction="#showQuestionView" prefHeight="58.0" prefWidth="62.0" text="show" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextArea layoutX="573.0" layoutY="196.0" prefHeight="388.0" prefWidth="467.0">
+         <effect>
+            <DropShadow height="26.86" radius="12.93" width="26.86">
+               <color>
+                  <Color red="0.015350877307355404" green="0.5526315569877625" blue="0.445175439119339" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TextArea>
+      <TableView fx:id="examViewTable" layoutX="572.0" layoutY="196.0" prefHeight="388.0" prefWidth="467.0">
+         <columns>
+            <TableColumn fx:id="examViewIdColumn" prefWidth="75.0" text="#" />
+            <TableColumn fx:id="examViewQuestioColumn" minWidth="0.0" prefWidth="295.199951171875" text="question" />
+            <TableColumn fx:id="examViewScoreColumn" prefWidth="93.60009765625" text="score" />
+         </columns>
+      </TableView>
+      <Button fx:id="addQuestionBtn" contentDisplay="CENTER" layoutX="481.0" layoutY="288.0" mnemonicParsing="false" onAction="#addToExamView" prefHeight="67.0" prefWidth="79.0" text="Add">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/pngwingright.png" />
+               </image>
+               <effect>
+                  <InnerShadow choke="0.86">
+                     <color>
+                        <Color red="0.018274853006005287" green="0.7894737124443054" blue="0.5324074029922485" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.006700779777020216" green="0.7236841917037964" blue="0.48468974232673645" />
+               </color>
+            </InnerShadow>
+         </effect></Button>
+      <Button fx:id="removeQuestionBtn" contentDisplay="CENTER" layoutX="481.0" layoutY="406.0" mnemonicParsing="false" onAction="#removeQuetsionFromExam" prefHeight="65.0" prefWidth="79.0" text="Remove">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/pngwingleft.png" />
+               </image>
+               <effect>
+                  <InnerShadow choke="1.0">
+                     <color>
+                        <Color red="0.9736841917037964" green="0.4643031060695648" blue="0.4643031060695648" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.9473684430122375" green="0.37719297409057617" blue="0.37719297409057617" />
+               </color>
+            </InnerShadow>
+         </effect></Button>
+      <Text layoutX="773.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Label layoutX="569.0" layoutY="162.0" prefHeight="35.0" prefWidth="149.0" text="Exam view:" textFill="#108679">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="setScoreBtn" layoutX="952.0" layoutY="156.0" mnemonicParsing="false" onAction="#setScoreQuestion" prefHeight="35.0" prefWidth="87.0" text="set score" />
+      <TextField fx:id="scoreTextField" layoutX="847.0" layoutY="156.0" prefHeight="35.0" prefWidth="106.0" promptText="enter score" />
+      <Label layoutX="702.0" layoutY="597.0" prefHeight="35.0" prefWidth="68.0" text="Set time:" textFill="#1e1f26">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="setTimeTextField" layoutX="770.0" layoutY="597.0" prefHeight="35.0" prefWidth="106.0" />
+      <Text layoutX="165.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="select question from the bank and add it to the exam">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Label fx:id="errLabel" layoutX="60.0" layoutY="597.0" prefHeight="27.0" prefWidth="375.0" textFill="#e11616">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="26.0" layoutY="166.0" prefHeight="35.0" prefWidth="173.0" text="Questions bank:">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="3.0" prefHeight="58.0" prefWidth="123.0" text="Cems" textFill="#00ffbd">
+         <font>
+            <Font name="Calibri Bold" size="50.0" />
+         </font>
+         <effect>
+            <DropShadow height="38.59" radius="18.795" spread="0.53" width="38.59">
+               <input>
+                  <InnerShadow height="191.25" radius="111.0625" width="255.0">
+                     <color>
+                        <Color green="0.02631578966975212" blue="0.01798245683312416" />
+                     </color>
+                  </InnerShadow>
+               </input>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Text fx:id="toolWriteQuestions" fill="#03573c" layoutX="525.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Write Questions">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="toolGrade" fill="#03573c" layoutX="875.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Grade">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="toolStatistics" fill="#03573c" layoutX="970.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Statistics">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="toolCreateExams" fill="#03573c" layoutX="710.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Create Exams">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="849.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="select a question and set its score">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

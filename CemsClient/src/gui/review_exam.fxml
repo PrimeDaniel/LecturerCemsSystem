@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="createQuestionForm" prefHeight="731.0" prefWidth="1067.0" style="-fx-background-color: #d8bfd8;" styleClass="b" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ReviewExamController">
+   <children>
+      <ImageView fitHeight="758.0" fitWidth="1067.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/background.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="860.0" layoutY="171.0" prefHeight="35.0" prefWidth="114.0" text="Exam Number:" textFill="#1e1f26">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="testIdLabel" layoutX="966.0" layoutY="171.0" prefHeight="35.0" prefWidth="62.0" text="000000" textFill="#1e1f26">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="backBtn" layoutX="23.0" layoutY="682.0" mnemonicParsing="false" onAction="#goBack" prefHeight="35.0" prefWidth="74.0" text="back" />
+      <Button fx:id="saveExamBtn" layoutX="856.0" layoutY="573.0" mnemonicParsing="false" onAction="#saveExam" prefHeight="69.0" prefWidth="175.0" style="-fx-background-color: #37da83;" text="Save exam">
+         <effect>
+            <DropShadow height="50.31" radius="23.9225" width="47.38">
+               <color>
+                  <Color red="0.02777777798473835" green="1.0" blue="0.8217592835426331" />
+               </color>
+            </DropShadow>
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <TableView fx:id="ExamQuestionTable" layoutX="63.0" layoutY="198.0" prefHeight="313.0" prefWidth="968.0">
+         <columns>
+            <TableColumn fx:id="questionId" prefWidth="75.0" text="#" />
+            <TableColumn fx:id="questionText" minWidth="0.0" prefWidth="257.0" text="question" />
+            <TableColumn fx:id="answer1" maxWidth="89.0" prefWidth="140.0" text="answer 1" />
+            <TableColumn fx:id="answer2" prefWidth="140.0" text="answer 2" />
+            <TableColumn fx:id="answer3" prefWidth="140.0" text="answer 3" />
+            <TableColumn fx:id="answer4" prefWidth="140.0" text="answer 4" />
+            <TableColumn fx:id="score" minWidth="0.0" prefWidth="126.0" text="score" />
+         </columns>
+      </TableView>
+      <Label layoutX="97.0" layoutY="162.0" prefHeight="35.0" prefWidth="114.0" text="Exam Review:" textFill="#1e1f26">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="studentComments" layoutX="397.0" layoutY="551.0" prefHeight="82.0" prefWidth="269.0" style="-fx-background-color: black;">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </TextArea>
+      <TextArea fx:id="lecturetComments" layoutX="97.0" layoutY="551.0" prefHeight="85.0" prefWidth="269.0" style="-fx-background-color: black;">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </TextArea>
+      <Text layoutX="172.0" layoutY="547.0" strokeType="OUTSIDE" strokeWidth="0.0" text="lecturer comments:" wrappingWidth="114.0" />
+      <Text layoutX="466.0" layoutY="548.0" strokeType="OUTSIDE" strokeWidth="0.0" text="comments for student :" wrappingWidth="174.99999999999994" />
+      <Text fill="#018679" layoutX="397.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Review" wrappingWidth="467.0">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Text>
+      <TextField layoutX="270.0" layoutY="20.0" prefHeight="25.0" prefWidth="193.0" text="Home &gt; Exam creation &gt; Review" />
+      <Label layoutX="147.0" layoutY="136.0" prefHeight="35.0" prefWidth="74.0" text="Subject:" textFill="#1e1f26">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="453.0" layoutY="136.0" prefHeight="35.0" prefWidth="62.0" text="Course:" textFill="#1e1f26">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="763.0" layoutY="136.0" prefHeight="35.0" prefWidth="74.0" text="Set time:" textFill="#1e1f26">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Label>
+      <Text fx:id="subject" layoutX="229.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="subject_selected" wrappingWidth="187.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="course" layoutX="510.0" layoutY="158.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course_selected" wrappingWidth="240.60003662109375">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="testTiime" layoutX="831.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time_selected" wrappingWidth="123.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Label fx:id="errLabel" layoutX="500.0" layoutY="650.0" prefHeight="35.0" prefWidth="310.0" textFill="#2fff00">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="3.0" prefHeight="58.0" prefWidth="123.0" text="Cems" textFill="#00ffbd">
+         <font>
+            <Font name="Calibri Bold" size="50.0" />
+         </font>
+         <effect>
+            <DropShadow height="38.59" radius="18.795" spread="0.53" width="38.59">
+               <input>
+                  <InnerShadow height="191.25" radius="111.0625" width="255.0">
+                     <color>
+                        <Color green="0.02631578966975212" blue="0.01798245683312416" />
+                     </color>
+                  </InnerShadow>
+               </input>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Text fx:id="toolWriteQuestions" fill="#03573c" layoutX="525.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Write Questions">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="toolGrade" fill="#03573c" layoutX="875.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Grade">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="toolStatistics" fill="#03573c" layoutX="970.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Statistics">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="toolCreateExams" fill="#03573c" layoutX="710.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Create Exams">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

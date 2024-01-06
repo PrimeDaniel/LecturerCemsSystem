@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RequestTimecontroller">
+   <children>
+      <Label fx:id="label" alignment="CENTER" layoutX="2.0" layoutY="183.0" prefHeight="17.0" prefWidth="600.0" text="Label" />
+   </children>
+</AnchorPane>

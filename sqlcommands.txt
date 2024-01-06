@@ -1,0 +1,112 @@
+CREATE TABLE users(id INT NOT NULL AUTO_INCREMENT,
+  firstName VARCHAR(45) NOT NULL,
+  lastName VARCHAR(45) NOT NULL,
+  userName VARCHAR(45) NOT NULL,
+  password VARCHAR(45) NOT NULL,
+  isLogged INT NOT NULL DEFAULT 0,
+  role INT NOT NULL,
+  PRIMARY KEY (id),
+  UNIQUE (userName));
+
+INSERT INTO users(firstName,lastName,userName ,password ,isLogged,role)
+ VALUES("anat", "dsa","anat","123",0,1);
+
+
+UPDATE users
+SET isLogged=1 
+WHERE userName="r" and password ="123";
+
+
+CREATE TABLE subjects (
+  subject_id INT AUTO_INCREMENT PRIMARY KEY,
+  subject_name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE courses (
+  course_id INT AUTO_INCREMENT PRIMARY KEY,
+  course_name VARCHAR(255) NOT NULL,
+  subject_id INT NOT NULL,
+  FOREIGN KEY (subject_id) REFERENCES subjects(subject_id)
+);
+
+
+CREATE TABLE exams (
+  exam_id INT AUTO_INCREMENT PRIMARY KEY,
+  course_name VARCHAR(255) NOT NULL,
+  lecturer_id INT NOT NULL,
+  FOREIGN KEY (lecturer_id) REFERENCES users(id)
+);
+
+
+CREATE TABLE questions (
+  question_id INT AUTO_INCREMENT PRIMARY KEY,
+  question_text TEXT NOT NULL,
+  answer1 TEXT NOT NULL,
+  answer2 TEXT NOT NULL,
+  answer3 TEXT NOT NULL,
+  answer4 TEXT NOT NULL,
+  correct_answer TINYINT NOT NULL CHECK (correct_answer BETWEEN 1 AND 4),
+  course_id INT NOT NULL,
+  FOREIGN KEY (course_id) REFERENCES courses(course_id)
+);
+
+
+
+
+
+
+-- Insert subjects
+INSERT INTO subjects (subject_name) VALUES 
+('Math'), 
+('Physics'), 
+('Chemistry'), 
+('Biology'), 
+('History'), 
+('English'), 
+('Computer Science');
+
+-- Insert courses
+-- Math courses
+INSERT INTO courses (course_name, subject_id) VALUES 
+('Calculus 1', 1), 
+('Calculus 2', 1), 
+('Statistics', 1);
+
+-- Physics courses
+INSERT INTO courses (course_name, subject_id) VALUES 
+('Quantum Mechanics', 2), 
+('Electromagnetism', 2), 
+('Thermodynamics', 2);
+
+-- Chemistry courses
+INSERT INTO courses (course_name, subject_id) VALUES 
+('Organic Chemistry', 3), 
+('Physical Chemistry', 3), 
+('Analytical Chemistry', 3);
+
+-- Biology courses
+INSERT INTO courses (course_name, subject_id) VALUES 
+('Genetics', 4), 
+('Ecology', 4), 
+('Biochemistry', 4);
+
+-- History courses
+INSERT INTO courses (course_name, subject_id) VALUES 
+('Ancient History', 5), 
+('Modern History', 5), 
+('World War II', 5);
+
+-- English courses
+INSERT INTO courses (course_name, subject_id) VALUES 
+('Grammar', 6), 
+('Literature', 6), 
+('Composition', 6);
+
+-- Computer Science courses
+INSERT INTO courses (course_name, subject_id) VALUES 
+('Algorithms', 7), 
+('Data Structures', 7), 
+('Operating Systems', 7);
+
+
+

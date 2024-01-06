@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="createQuestionForm" prefHeight="731.0" prefWidth="1067.0" styleClass="background" stylesheets="@/Styles/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.LecturerPageController">
+   <children>
+      <Label layoutX="48.0" layoutY="3.0" prefHeight="58.0" prefWidth="123.0" text="Cems" textFill="#00ffbd">
+         <font> 
+            <Font name="Calibri Bold" size="50.0" />
+         </font>
+         <effect>
+            <DropShadow height="38.59" radius="18.795" spread="0.53" width="38.59">
+               <input>
+                  <InnerShadow height="191.25" radius="111.0625" width="255.0">
+                     <color>
+                        <Color green="0.02631578966975212" blue="0.01798245683312416" />
+                     </color>
+                  </InnerShadow>
+               </input>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Label layoutX="319.0" layoutY="94.0" prefHeight="58.0" prefWidth="180.0" text="Welcome" textFill="#018679">
+         <font>
+            <Font name="Calibri Bold" size="41.0" />
+         </font>
+      </Label>
+      <Button fx:id="logOutBtn" layoutX="14.0" layoutY="682.0" mnemonicParsing="false" onAction="#logOut" prefHeight="37.0" prefWidth="136.0" styleClass="declineButton" text="Log-out">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="1.0" />
+               </color>
+            </InnerShadow>
+         </effect></Button>
+      <TableView fx:id="ongoingExamsTable" layoutX="251.0" layoutY="446.0" prefHeight="143.0" prefWidth="635.0">
+         <columns>
+            <TableColumn fx:id="examId" prefWidth="236.00003051757812" text="Exam id" />
+            <TableColumn fx:id="examCode" prefWidth="176.00003051757812" text="Code" />
+            <TableColumn fx:id="timeRem" prefWidth="222.40008544921875" text="Time" />
+         </columns>
+      </TableView>
+      <Label layoutX="251.0" layoutY="411.0" prefHeight="35.0" prefWidth="114.0" text="ongoing exams:" textFill="#1e1f26">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="477.0" layoutY="147.0" prefHeight="35.0" prefWidth="114.0" text="Quick actions:" textFill="#1e1f26">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="writeQuestionBtn" layoutX="437.0" layoutY="201.0" mnemonicParsing="false" onAction="#showCreateQuestionForm" prefHeight="49.0" prefWidth="194.0" text="Write a question">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.007843137718737125" green="0.7647058963775635" blue="0.7372549176216125" />
+               </color>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="CreateExamBtn" layoutX="437.0" layoutY="262.0" mnemonicParsing="false" onAction="#showCreateExamForm" prefHeight="49.0" prefWidth="194.0" text="Create an Exam">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.007843137718737125" green="0.7647058963775635" blue="0.7372549176216125" />
+               </color>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="StartExamBtn" layoutX="437.0" layoutY="387.0" mnemonicParsing="false" onAction="#startExam" prefHeight="49.0" prefWidth="194.0" styleClass="ApprovedButton" text="Start an Exam">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.21568627655506134" green="0.8549019694328308" blue="0.5137255191802979" />
+               </color>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Text fx:id="toolWriteQuestions" fill="#03573c" layoutX="525.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Write Questions">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="toolGrade" fill="#03573c" layoutX="875.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Grade">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="toolStatistics" fill="#03573c" layoutX="970.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Statistics">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="toolCreateExams" fill="#03573c" layoutX="710.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Create Exams">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Label fx:id="lecturerName" layoutX="499.0" layoutY="94.0" prefHeight="58.0" prefWidth="416.0" textFill="#018679">
+         <font>
+            <Font name="Calibri Bold" size="41.0" />
+         </font>
+      </Label>
+      <Button fx:id="CloseExamBtn" layoutX="251.0" layoutY="602.0" mnemonicParsing="false" onAction="#closeExam" prefHeight="49.0" prefWidth="170.0" text="Close an Exam">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="TimeRequestBtn" layoutX="691.0" layoutY="602.0" mnemonicParsing="false" onAction="#showTimeRequestForm" prefHeight="49.0" prefWidth="194.0" style="-fx-background-color: #37da83;" styleClass="ApprovedButton" text="Time Request">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.21568627655506134" green="0.8549019694328308" blue="0.5137255191802979" />
+               </color>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="pastExamsBtn" layoutX="437.0" layoutY="323.0" mnemonicParsing="false" onAction="#pastExams" prefHeight="49.0" prefWidth="194.0" text="Past Exams">
+         <effect>
+            <InnerShadow>
+               <color>
+                  <Color red="0.007843137718737125" green="0.7647058963775635" blue="0.7372549176216125" />
+               </color>
+            </InnerShadow>
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

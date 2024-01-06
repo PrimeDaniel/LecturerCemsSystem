@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="731.0" prefWidth="1067.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.StartExamController">
+   <children>
+      <ImageView fitHeight="758.0" fitWidth="1067.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/background.jpeg" />
+         </image>
+      </ImageView>
+      <Text layoutX="157.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="choose exam to start:" />
+      <TableView fx:id="examsTable" layoutX="157.0" layoutY="185.0" prefHeight="348.0" prefWidth="816.0">
+        <columns>
+          <TableColumn fx:id="examId" prefWidth="75.0" text="exam id" />
+          <TableColumn fx:id="courseName" prefWidth="155.20003509521484" text="course name" />
+            <TableColumn fx:id="lComments" prefWidth="211.99993896484375" text="lecturer comments" />
+            <TableColumn fx:id="sComments" prefWidth="257.6000671386719" text="student comments" />
+            <TableColumn fx:id="testTime" prefWidth="115.20001220703125" text="test time" />
+        </columns>
+      </TableView>
+      <Button layoutX="882.0" layoutY="548.0" mnemonicParsing="false" onAction="#startExamBtn" prefHeight="47.0" prefWidth="91.0" text="start" />
+      <Label fx:id="label" layoutX="472.0" layoutY="620.0" prefHeight="17.0" prefWidth="281.0" />
+      <Label layoutX="48.0" layoutY="3.0" prefHeight="58.0" prefWidth="123.0" text="Cems" textFill="#00ffbd">
+         <font>
+            <Font name="Calibri Bold" size="50.0" />
+         </font>
+         <effect>
+            <DropShadow height="38.59" radius="18.795" spread="0.53" width="38.59">
+               <input>
+                  <InnerShadow height="191.25" radius="111.0625" width="255.0">
+                     <color>
+                        <Color green="0.02631578966975212" blue="0.01798245683312416" />
+                     </color>
+                  </InnerShadow>
+               </input>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Text fx:id="toolWriteQuestions" fill="#03573c" layoutX="525.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Write Questions">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="toolGrade" fill="#03573c" layoutX="875.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Grade">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="toolStatistics" fill="#03573c" layoutX="970.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Statistics">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="toolCreateExams" fill="#03573c" layoutX="710.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Create Exams">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Button fx:id="backBtn" layoutX="25.0" layoutY="682.0" mnemonicParsing="false" onAction="#backToMainScreen" prefHeight="35.0" prefWidth="74.0" text="back" />
+      <Text fill="#018679" layoutX="407.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Start" wrappingWidth="467.0">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Text>
+      <TextField layoutX="270.0" layoutY="20.0" prefHeight="25.0" prefWidth="193.0" text="Home &gt; Exam creation &gt; Review" />
+      <TextField fx:id="fourDigitCode" layoutX="674.0" layoutY="559.0" promptText="enter exam code" />
+   </children>
+</Pane>

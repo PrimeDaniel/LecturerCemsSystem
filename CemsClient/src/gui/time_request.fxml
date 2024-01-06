@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="timeRequestForm" prefHeight="731.0" prefWidth="1067.0" style="-fx-background-color: #d8bfd8;" styleClass="b" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.TimeRequestController">
+   <children>
+      <ImageView fitHeight="758.0" fitWidth="1067.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/background.jpeg" />
+         </image>
+      </ImageView>
+      <Button fx:id="backBtn" layoutX="23.0" layoutY="682.0" mnemonicParsing="false" onAction="#backToMainScreen" prefHeight="35.0" prefWidth="74.0" text="back" />
+      <Button fx:id="requestTimeBtn" layoutX="836.0" layoutY="532.0" mnemonicParsing="false" onAction="#requestTime" prefHeight="43.0" prefWidth="173.0" text="Request Extra time">
+         <effect>
+            <DropShadow height="50.31" radius="23.9225" width="47.38">
+               <color>
+                  <Color red="0.02777777798473835" green="1.0" blue="0.8217592835426331" />
+               </color>
+            </DropShadow>
+         </effect>
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
+      <Text fill="#018679" layoutX="411.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Request" wrappingWidth="467.0">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Text>
+      <TextField layoutX="275.0" layoutY="19.0" text="Home &gt; Time Request" />
+      <Label layoutX="280.0" layoutY="240.0" prefHeight="35.0" prefWidth="114.0" text="Enter reason:" textFill="#1e1f26">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="reasonText" layoutX="280.0" layoutY="277.0" prefHeight="298.0" prefWidth="531.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="addTime" layoutX="434.0" layoutY="161.0" prefHeight="52.0" prefWidth="113.0">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </TextField>
+      <Label layoutX="276.0" layoutY="169.0" prefHeight="35.0" prefWidth="158.0" text="Enter additional time:" textFill="#1e1f26">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="3.0" prefHeight="58.0" prefWidth="123.0" text="Cems" textFill="#00ffbd">
+         <font>
+            <Font name="Calibri Bold" size="50.0" />
+         </font>
+         <effect>
+            <DropShadow height="38.59" radius="18.795" spread="0.53" width="38.59">
+               <input>
+                  <InnerShadow height="191.25" radius="111.0625" width="255.0">
+                     <color>
+                        <Color green="0.02631578966975212" blue="0.01798245683312416" />
+                     </color>
+                  </InnerShadow>
+               </input>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Text fx:id="toolWriteQuestions" fill="#03573c" layoutX="525.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Write Questions">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="toolGrade" fill="#03573c" layoutX="875.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Grade">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="toolStatistics" fill="#03573c" layoutX="970.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Statistics">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="toolCreateExams" fill="#03573c" layoutX="710.0" layoutY="39.0" stroke="#02a894" strokeType="OUTSIDE" text="Create Exams">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Label fx:id="errLabel" layoutX="402.0" layoutY="598.0" prefHeight="35.0" prefWidth="327.0" />
+   </children>
+</Pane>

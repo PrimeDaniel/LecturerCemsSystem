@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane fx:id="createQuestionForm" prefHeight="734.0" prefWidth="1081.0" styleClass="background" stylesheets="@/Styles/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button layoutX="23.0" layoutY="685.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="74.0" text="back" />
+      <Label layoutX="50.0" layoutY="-1.0" prefHeight="58.0" prefWidth="123.0" text="Cems" textFill="#00ffbd">
+         <font>
+            <Font name="Calibri Bold" size="50.0" />
+         </font>
+         <effect>
+            <DropShadow height="38.59" radius="18.795" spread="0.53" width="38.59">
+               <input>
+                  <InnerShadow height="191.25" radius="111.0625" width="255.0">
+                     <color>
+                        <Color green="0.02631578966975212" blue="0.01798245683312416" />
+                     </color>
+                  </InnerShadow>
+               </input>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Text fill="#018679" layoutX="397.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question Update" wrappingWidth="467.0">
+         <font>
+            <Font name="System Bold" size="39.0" />
+         </font>
+      </Text>
+      <Label layoutX="87.0" layoutY="109.0" prefHeight="35.0" prefWidth="114.0" text="Subject:" textFill="#1e1f26">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Label>
+      <TextField layoutX="252.0" layoutY="16.0" prefHeight="25.0" prefWidth="192.0" text="Home &gt; Create Exam &gt; Update" />
+      <Label layoutX="285.0" layoutY="127.0" prefHeight="35.0" prefWidth="253.0" text="Question:" textFill="#1e1f26">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="281.0" layoutY="279.0" prefHeight="35.0" prefWidth="417.0" text="Answers (mark the correct answer):" textFill="#1e1f26">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="308.0" layoutY="322.0" prefHeight="35.0" prefWidth="28.0" text="1)" textFill="#1e1f26">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="answer1" layoutX="338.0" layoutY="321.0" prefHeight="35.0" prefWidth="576.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label layoutX="307.0" layoutY="378.0" prefHeight="35.0" prefWidth="28.0" text="2)" textFill="#1e1f26">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="answer2" layoutX="338.0" layoutY="377.0" prefHeight="35.0" prefWidth="576.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label layoutX="307.0" layoutY="432.0" prefHeight="35.0" prefWidth="28.0" text="3)" textFill="#1e1f26">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="answer3" layoutX="338.0" layoutY="433.0" prefHeight="35.0" prefWidth="576.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label layoutX="306.0" layoutY="488.0" prefHeight="35.0" prefWidth="28.0" text="4)" textFill="#1e1f26">
+         <font>
+            <Font name="Calibri" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="answer4" layoutX="337.0" layoutY="487.0" prefHeight="35.0" prefWidth="576.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Button fx:id="saveButton" alignment="CENTER" layoutX="803.0" layoutY="592.0" mnemonicParsing="false" onAction="#btnSaveQuestion" prefHeight="47.0" prefWidth="200.0" styleClass="ApprovedButton" text="Save update">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.013401559554040432" green="0.7236841917037964" blue="0.42773309350013733" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <TextArea fx:id="questionDescriptionField" layoutX="284.0" layoutY="162.0" prefHeight="104.0" prefWidth="630.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </TextArea>
+      <RadioButton fx:id="correct1" layoutX="277.0" layoutY="330.0" mnemonicParsing="false" onAction="#btnCorrect1" prefHeight="17.0" prefWidth="10.0">
+         <toggleGroup>
+            <ToggleGroup fx:id="correctAnswer" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="correct2" layoutX="277.0" layoutY="387.0" mnemonicParsing="false" onAction="#btnCorrect2" prefHeight="17.0" prefWidth="10.0">
+         <toggleGroup>
+            <ToggleGroup fx:id="correctAnswer" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="correct3" layoutX="277.0" layoutY="442.0" mnemonicParsing="false" onAction="#btnCorrect3" prefHeight="17.0" prefWidth="10.0">
+         <toggleGroup>
+            <ToggleGroup fx:id="correctAnswer" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="correct4" layoutX="277.0" layoutY="498.0" mnemonicParsing="false" onAction="#btnCorrect4" prefHeight="17.0" prefWidth="10.0">
+         <toggleGroup>
+            <ToggleGroup fx:id="correctAnswer1" />
+         </toggleGroup>
+      </RadioButton>
+      <Label layoutX="87.0" layoutY="162.0" prefHeight="35.0" prefWidth="114.0" text="Course:" textFill="#1e1f26">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="getCourse" layoutX="50.0" layoutY="194.0" />
+      <TextField fx:id="getSubject" layoutX="50.0" layoutY="142.0" />
+      <Text fill="#03573c" layoutX="464.0" layoutY="35.0" stroke="#02a894" strokeType="OUTSIDE" text="Write Questions">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#03573c" layoutX="923.0" layoutY="36.0" stroke="#02a894" strokeType="OUTSIDE" text="Grade">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#03573c" layoutX="1003.0" layoutY="36.0" stroke="#02a894" strokeType="OUTSIDE" text="Statistics">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#03573c" layoutX="626.0" layoutY="35.0" stroke="#02a894" strokeType="OUTSIDE" text="Create Exams">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#03573c" layoutX="774.0" layoutY="35.0" stroke="#02a894" strokeType="OUTSIDE" text="Time Request">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Label layoutX="811.0" layoutY="546.0" prefHeight="35.0" prefWidth="114.0" text="Set Score:" textFill="#1e1f26">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="getCourse1" layoutX="883.0" layoutY="544.0" prefHeight="39.0" prefWidth="113.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+   </children>
+</Pane>

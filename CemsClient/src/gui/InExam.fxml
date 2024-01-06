@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="572.0" prefWidth="689.0" styleClass="background" stylesheets="@/Styles/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.InExamController">
+   <children>
+      <Label fx:id="crsName" layoutX="217.0" layoutY="19.0" prefHeight="40.0" prefWidth="154.0" text="Course Name Exam" textFill="#072dc4" AnchorPane.leftAnchor="217.0" AnchorPane.rightAnchor="318.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <Text layoutX="33.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question: " wrappingWidth="67.19998779296861">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text fx:id="qNum" layoutX="98.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Text>
+      <Text layoutX="112.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="from ">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <Text fx:id="qSize" layoutX="147.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Text>
+      <Text fx:id="qtxt" layoutX="33.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="qtxt:" wrappingWidth="638.9366912841797" AnchorPane.leftAnchor="33.0">
+         <font>
+            <Font size="14.0" />
+         </font></Text>
+      <RadioButton fx:id="ansBtn1" layoutX="41.0" layoutY="227.0" mnemonicParsing="false" onAction="#ansBtn1Clicked" text="1" AnchorPane.leftAnchor="41.0">
+         <toggleGroup>
+            <ToggleGroup fx:id="AnsNumber" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="ansBtn2" layoutX="41.0" layoutY="270.0" mnemonicParsing="false" onAction="#ansBtn2Clicked" text="2" toggleGroup="$AnsNumber" AnchorPane.leftAnchor="41.0" />
+      <RadioButton fx:id="ansBtn3" layoutX="43.0" layoutY="310.0" mnemonicParsing="false" onAction="#ansBtn3Clicked" text="3" toggleGroup="$AnsNumber" AnchorPane.leftAnchor="41.0" />
+      <RadioButton fx:id="ansBtn4" layoutX="43.0" layoutY="356.0" mnemonicParsing="false" onAction="#ansBtn4Clicked" text="4" toggleGroup="$AnsNumber" AnchorPane.leftAnchor="41.0" />
+      <Text fill="#072dc4" layoutX="41.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="choose the correct answer: (Select one only):" wrappingWidth="336.048095703125" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="191.734375">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Text>
+      <Button fx:id="prevBtn" layoutX="196.0" layoutY="374.0" mnemonicParsing="false" onAction="#goToPreviousQuestion" prefHeight="47.0" prefWidth="97.0" text="Previous" />
+      <Text fx:id="ans1Txt" layoutX="72.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="594.9366912841797" AnchorPane.leftAnchor="73.0">
+         <font>
+            <Font size="15.0" />
+         </font></Text>
+      <Text fx:id="ans2Txt" layoutX="76.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="587.7367401123047" AnchorPane.leftAnchor="73.0">
+         <font>
+            <Font size="15.0" />
+         </font></Text>
+      <Text fx:id="ans3Txt" layoutX="73.0" layoutY="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="594.9366912841797" AnchorPane.leftAnchor="73.0">
+         <font>
+            <Font size="15.0" />
+         </font></Text>
+      <Text fx:id="ans4Txt" layoutX="73.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="594.9366912841797" AnchorPane.leftAnchor="73.0">
+         <font>
+            <Font size="15.0" />
+         </font></Text>
+      <Text fx:id="scoreTxt" fill="#072dc4" layoutX="460.0" layoutY="209.265625" strokeType="OUTSIDE" strokeWidth="0.0" text="Score :" wrappingWidth="175.6063232421875" AnchorPane.topAnchor="192.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Text>
+      <Button fx:id="subBtn" layoutX="553.0" layoutY="374.0" mnemonicParsing="false" onAction="#submit" prefHeight="47.0" prefWidth="114.0" text="Submit" />
+      <Button fx:id="nextBtn" layoutX="352.0" layoutY="374.0" mnemonicParsing="false" onAction="#GoToNextQuestion" prefHeight="47.0" prefWidth="97.0" text="Next" />
+      <Text layoutX="167.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="472.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Questions Answered :" wrappingWidth="137.59995117187492">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text fx:id="ansNum" fill="#219407" layoutX="610.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="16.10546875">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Text>
+      <Label id="timeLabel" fx:id="timeLabel" layoutX="485.0" layoutY="19.0" prefHeight="18.0" prefWidth="146.0" text="Reamening Time :" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,12 @@
+{
+  "java.project.sourcePaths": [
+    "CemsShared\\src",
+    "OCSF\\src",
+    "CemsClient\\src",
+    "cemsServer\\src"
+  ],
+  "java.project.referencedLibraries": [
+    "lib/**/*.jar",
+    "cemsServer/lib/mysql-connector-java-8.0.13.jar"
+  ]
+}
