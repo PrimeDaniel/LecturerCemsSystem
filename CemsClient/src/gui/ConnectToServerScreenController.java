@@ -42,7 +42,7 @@ public class ConnectToServerScreenController  {
                 System.out.println("Failed to connect to the server.");
             }
         } catch (Exception e) {
-        	wrongIpText.setText("wrong ip!!,try again");
+        	wrongIpText.setText("wrong ip or port,try again");
         }
     }
 

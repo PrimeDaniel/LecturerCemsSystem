@@ -60,7 +60,6 @@ public class ServerCommandsStudent {
 			try {
 				client.sendToClient(response);
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 
@@ -221,12 +220,13 @@ public class ServerCommandsStudent {
 
 			byte[] mybytearray2 = new byte[(int) newFile.length()];
 			FileInputStream fis = new FileInputStream(newFile);
-			BufferedInputStream bis = new BufferedInputStream(fis);
+			try (BufferedInputStream bis = new BufferedInputStream(fis)) {
+				msg2.initArray(mybytearray2.length);
+				msg2.setSize(mybytearray2.length);
 
-			msg2.initArray(mybytearray2.length);
-			msg2.setSize(mybytearray2.length);
+				bis.read(msg2.getMybytearray(), 0, mybytearray2.length);
+			}
 
-			bis.read(msg2.getMybytearray(), 0, mybytearray2.length);
 			Response response = new Response("DownloadManualExam", msg2);
 			client.sendToClient(response);
 		} catch (Exception e) {
@@ -473,7 +473,6 @@ public class ServerCommandsStudent {
 					Response response = new Response("AddedTime", added);
 					client.sendToClient(response);
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			} else
@@ -481,18 +480,15 @@ public class ServerCommandsStudent {
 					Response response = new Response("AddedTime", added);
 					client.sendToClient(response);
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		try {
 			Response response = new Response("AddedTime", added);
 			client.sendToClient(response);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

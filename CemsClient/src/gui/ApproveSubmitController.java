@@ -86,7 +86,7 @@ public class ApproveSubmitController {
 
 	/**
 	 * This function sets the student, chat client, and student manual test controller for a given object.
-	 * when the test tybe is Manual
+	 * when the test type is Manual
 	 * 
 	 * @param Student An object of the class Users representing a student.
 	 * @param client TThe ChatClient object that represents the connection between the student and the
@@ -235,7 +235,7 @@ public class ApproveSubmitController {
 	public void examIsLocked() {
 		yesBtn.setDisable(true);
 		noBtn.setDisable(true);
-		lbl.setText("Sorry Exam is locked by luctuer!");
+		lbl.setText("Sorry Exam is locked by lecturer!");
 
 		if (DigOrMan == 0) { //Digital exam case
 			try {

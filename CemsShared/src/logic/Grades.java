@@ -1,7 +1,6 @@
 package logic;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 
 // This class represent a Grade object after student's test.
 // It has instance variables `examID`, `studentID`, `courseID`, `grade`, and `lectuerID`, and methods to get
