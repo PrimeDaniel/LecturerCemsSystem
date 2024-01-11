@@ -43,6 +43,8 @@ public class LoginScreenController {
 	private ImageView image;
 	@FXML
 	private Pane pane;
+	@FXML
+    private TextField portTextField;
 
 	/**
 	 * This function sets the ChatClient and LoginScreenController objects and sets the controller on the

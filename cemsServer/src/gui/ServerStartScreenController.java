@@ -23,6 +23,8 @@ import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
 import logic.LoggedUsers;
 import server.EchoServer;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 public class ServerStartScreenController implements Initializable {
 
@@ -44,7 +46,8 @@ public class ServerStartScreenController implements Initializable {
 	private TableColumn<LoggedUsers, Integer> role;
 	@FXML
 	private TableView<LoggedUsers> table;
-
+    @FXML
+    private TextField serveripfield;
 	@FXML
 	private Circle colorCircle;
 	
@@ -56,6 +59,7 @@ public class ServerStartScreenController implements Initializable {
 		lastName.setCellValueFactory(new PropertyValueFactory<>("lastName"));
 		userName.setCellValueFactory(new PropertyValueFactory<>("userName"));
 		role.setCellValueFactory(new PropertyValueFactory<>("role"));
+		updateServerip();
 	
 
 	}
@@ -68,6 +72,7 @@ public class ServerStartScreenController implements Initializable {
 
 	@FXML
 	public void startServer() {
+
 
 		
 			if (server != null  ) {
@@ -82,8 +87,21 @@ public class ServerStartScreenController implements Initializable {
 				System.out.println("ERROR - Server is not initialized!");
 				 colorCircle.setFill(Color.RED);
 			}
-		
+			
 	}
+	@FXML
+    private void updateServerip(){
+		try {
+            InetAddress localHost = InetAddress.getLocalHost();
+            String ipAddress = localHost.getHostAddress();
+            serveripfield.setText(ipAddress);
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+            // Handle the exception appropriately
+        }
+
+	}
+
 
 	public void setServer(EchoServer server) {
 		this.server = server;

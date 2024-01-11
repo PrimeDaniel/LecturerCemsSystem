@@ -4,15 +4,17 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="861.0" styleClass="background" stylesheets="@/Styles/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ServerStartScreenController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="897.0" styleClass="background" stylesheets="@/Styles/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ServerStartScreenController">
    <children>
-      <Button fx:id="startBtn" layoutX="93.0" layoutY="156.0" mnemonicParsing="false" onAction="#startServer" styleClass="ApprovedButton" text="start" />
-      <Button fx:id="exitBtn" layoutX="92.0" layoutY="242.0" mnemonicParsing="false" onAction="#exitApplication" prefHeight="31.0" prefWidth="89.0" styleClass="declineButton" text="exit" />
-      <TableView fx:id="table" layoutX="343.0" layoutY="129.0" prefHeight="246.0" prefWidth="504.0">
+      <Button fx:id="startBtn" layoutX="144.0" layoutY="208.0" mnemonicParsing="false" onAction="#startServer" prefHeight="55.0" prefWidth="95.0" styleClass="ApprovedButton" text="start" />
+      <Button fx:id="exitBtn" layoutX="145.0" layoutY="378.0" mnemonicParsing="false" onAction="#exitApplication" prefHeight="31.0" prefWidth="89.0" styleClass="declineButton" text="exit" />
+      <TableView fx:id="table" layoutX="353.0" layoutY="95.0" prefHeight="214.0" prefWidth="495.0">
         <columns>
           <TableColumn fx:id="id" prefWidth="100.0" text="id" />
           <TableColumn fx:id="firstName" prefWidth="90.0" text="first name" />
@@ -21,12 +23,16 @@
             <TableColumn fx:id="role" prefWidth="101.0" text="role" />
         </columns>
       </TableView>
-      <Label layoutX="405.0" layoutY="92.0" text="online users" />
-      <Circle fx:id="colorCircle" fill="#ff2121" layoutX="195.0" layoutY="220.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
-      <Label layoutX="99.0" layoutY="210.0" text="Connection:">
+      <Label layoutX="360.0" layoutY="76.0" text="Connections (online Users):" />
+      <Circle fx:id="colorCircle" fill="#ff2121" layoutX="239.0" layoutY="288.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label layoutX="125.0" layoutY="279.0" text="Connection:">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
+      <TextField fx:id="serveripfield" layoutX="115.0" layoutY="93.0" />
+      <TextField layoutX="115.0" layoutY="140.0" />
+      <Text layoutX="50.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Server's IP:" />
+      <Text layoutX="78.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="port:" />
    </children>
 </Pane>

@@ -7,16 +7,18 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="617.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ConnectToServerScreenController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="429.0" prefWidth="617.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ConnectToServerScreenController">
    <children>
       <ImageView fitHeight="437.0" fitWidth="625.0" layoutY="-8.0" pickOnBounds="true">
          <image>
             <Image url="@images/BackgroundMini.jpg" />
          </image>
       </ImageView>
-      <TextField fx:id="ipTextField" layoutX="154.0" layoutY="133.0" text="localhost" />
-      <Label layoutX="223.0" layoutY="98.0" text="IP" />
-      <Button fx:id="sendbtn" layoutX="378.0" layoutY="133.0" mnemonicParsing="false" onAction="#Connect" text="Connect" />
+      <TextField fx:id="ipTextField" layoutX="209.0" layoutY="120.0" text="localhost" />
+      <Label layoutX="182.0" layoutY="124.0" prefHeight="17.0" prefWidth="20.0" text="IP:" />
+      <Button fx:id="sendbtn" layoutX="396.0" layoutY="133.0" mnemonicParsing="false" onAction="#Connect" text="Connect" />
       <Label fx:id="wrongIpText" layoutX="194.0" layoutY="194.0" prefHeight="21.0" prefWidth="241.0" />
+      <TextField fx:id="portTextField" layoutX="209.0" layoutY="156.0" promptText="example: 5555" />
+      <Label layoutX="170.0" layoutY="160.0" prefHeight="17.0" prefWidth="30.0" text="port:" />
    </children>
 </Pane>
