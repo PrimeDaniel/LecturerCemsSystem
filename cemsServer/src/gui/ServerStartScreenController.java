@@ -96,6 +96,7 @@ public class ServerStartScreenController implements Initializable {
 					}
 					try{
 						server.setPort(Integer.parseInt(port));
+						serverportfield.setText(port);
 					} catch (RuntimeException e) {
 						e.printStackTrace();
 					}
