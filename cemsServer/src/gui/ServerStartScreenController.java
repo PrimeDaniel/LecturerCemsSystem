@@ -50,6 +50,8 @@ public class ServerStartScreenController implements Initializable {
     private TextField serveripfield;
 	@FXML
 	private Circle colorCircle;
+	@FXML
+    private Button stopBtn;
 	
 
 	@Override
@@ -60,6 +62,10 @@ public class ServerStartScreenController implements Initializable {
 		userName.setCellValueFactory(new PropertyValueFactory<>("userName"));
 		role.setCellValueFactory(new PropertyValueFactory<>("role"));
 		updateServerip();
+		serveripfield.setFocusTraversable(false);
+		serveripfield.setMouseTransparent(true);
+		serveripfield.setEditable(false);
+
 	
 
 	}
@@ -72,8 +78,6 @@ public class ServerStartScreenController implements Initializable {
 
 	@FXML
 	public void startServer() {
-
-
 		
 			if (server != null  ) {
 				try {
@@ -106,6 +110,13 @@ public class ServerStartScreenController implements Initializable {
 	public void setServer(EchoServer server) {
 		this.server = server;
 	}
+
+	@FXML
+	public void stopServer() {
+		server.stopListening();
+		colorCircle.setFill(Color.web("RED"));;
+	}
+
 
 	@FXML
 	public void exitApplication() {

@@ -12,9 +12,9 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="897.0" styleClass="background" stylesheets="@/Styles/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ServerStartScreenController">
    <children>
-      <Button fx:id="startBtn" layoutX="144.0" layoutY="208.0" mnemonicParsing="false" onAction="#startServer" prefHeight="55.0" prefWidth="95.0" styleClass="ApprovedButton" text="start" />
-      <Button fx:id="exitBtn" layoutX="145.0" layoutY="378.0" mnemonicParsing="false" onAction="#exitApplication" prefHeight="31.0" prefWidth="89.0" styleClass="declineButton" text="exit" />
-      <TableView fx:id="table" layoutX="353.0" layoutY="95.0" prefHeight="214.0" prefWidth="495.0">
+      <Button fx:id="startBtn" layoutX="84.0" layoutY="258.0" mnemonicParsing="false" onAction="#startServer" prefHeight="31.0" prefWidth="160.0" styleClass="ApprovedButton" text="start" />
+      <Button fx:id="exitBtn" layoutX="771.0" layoutY="369.0" mnemonicParsing="false" onAction="#exitApplication" prefHeight="51.0" prefWidth="95.0" styleClass="declineButton" text="exit" />
+      <TableView fx:id="table" layoutX="371.0" layoutY="90.0" prefHeight="214.0" prefWidth="495.0">
         <columns>
           <TableColumn fx:id="id" prefWidth="100.0" text="id" />
           <TableColumn fx:id="firstName" prefWidth="90.0" text="first name" />
@@ -23,16 +23,17 @@
             <TableColumn fx:id="role" prefWidth="101.0" text="role" />
         </columns>
       </TableView>
-      <Label layoutX="360.0" layoutY="76.0" text="Connections (online Users):" />
-      <Circle fx:id="colorCircle" fill="#ff2121" layoutX="239.0" layoutY="288.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
-      <Label layoutX="125.0" layoutY="279.0" text="Connection:">
+      <Label layoutX="378.0" layoutY="71.0" text="Connections (online Users):" />
+      <Circle fx:id="colorCircle" fill="#ff2121" layoutX="229.0" layoutY="224.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label layoutX="115.0" layoutY="215.0" text="Connection:">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Label>
-      <TextField fx:id="serveripfield" layoutX="115.0" layoutY="93.0" />
-      <TextField layoutX="115.0" layoutY="140.0" />
-      <Text layoutX="50.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Server's IP:" />
-      <Text layoutX="78.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="port:" />
+      <TextField fx:id="serveripfield" editable="false" layoutX="105.0" layoutY="115.0" />
+      <TextField layoutX="105.0" layoutY="162.0" />
+      <Text layoutX="40.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Server's IP:" />
+      <Text layoutX="68.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="port:" />
+      <Button fx:id="stopBtn" layoutX="254.0" layoutY="258.0" mnemonicParsing="false" onAction="#stopServer" prefHeight="31.0" prefWidth="82.0" styleClass="declineButton" text="stop" />
    </children>
 </Pane>
