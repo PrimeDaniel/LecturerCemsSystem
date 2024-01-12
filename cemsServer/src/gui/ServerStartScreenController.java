@@ -30,6 +30,7 @@ public class ServerStartScreenController implements Initializable {
 
 	private EchoServer server;
 
+
 	@FXML
 	private Button startBtn;
 	@FXML
@@ -49,9 +50,12 @@ public class ServerStartScreenController implements Initializable {
     @FXML
     private TextField serveripfield;
 	@FXML
+    private TextField serverportfield;
+	@FXML
 	private Circle colorCircle;
 	@FXML
     private Button stopBtn;
+
 	
 
 	@Override
@@ -78,14 +82,29 @@ public class ServerStartScreenController implements Initializable {
 
 	@FXML
 	public void startServer() {
-		
+		String port="5555";
+
 			if (server != null  ) {
 				try {
+					//set port or use defult 5555
+					if(serverportfield.getText().trim().isEmpty()){
+						port="5555";
+					}
+					else{
+						port =serverportfield.getText();
+						
+					}
+					try{
+						server.setPort(Integer.parseInt(port));
+					} catch (RuntimeException e) {
+						e.printStackTrace();
+					}
+
+                // Start listening for connections
 					server.listen();
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
-				} // Start listening for connections
+				}
 				colorCircle.setFill(Color.web("#21ff25"));;
 			} else {
 				System.out.println("ERROR - Server is not initialized!");

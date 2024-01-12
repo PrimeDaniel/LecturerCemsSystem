@@ -31,7 +31,7 @@
          </font>
       </Label>
       <TextField fx:id="serveripfield" editable="false" layoutX="105.0" layoutY="115.0" />
-      <TextField layoutX="105.0" layoutY="162.0" />
+      <TextField fx:id="serverportfield" layoutX="105.0" layoutY="162.0" />
       <Text layoutX="40.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Server's IP:" />
       <Text layoutX="68.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="port:" />
       <Button fx:id="stopBtn" layoutX="254.0" layoutY="258.0" mnemonicParsing="false" onAction="#stopServer" prefHeight="31.0" prefWidth="82.0" styleClass="declineButton" text="stop" />
